@@ -4,7 +4,7 @@
 }}# Agent bond including Jolokia and jmx_exporter
 ADD agent-bond-opts {{= destPath }}
 RUN mkdir -p /opt/agent-bond \
- && curl http://central.maven.org/maven2/io/fabric8/agent-bond-agent/{{= agentBondVersion }}/agent-bond-agent-{{= agentBondVersion }}.jar \
+ && curl https://repo.maven.apache.org/maven2/io/fabric8/agent-bond-agent/{{= agentBondVersion }}/agent-bond-agent-{{= agentBondVersion }}.jar \
           -o /opt/agent-bond/agent-bond.jar \
  && chmod 444 /opt/agent-bond/agent-bond.jar \
  && chmod 755 {{= destPath}}
